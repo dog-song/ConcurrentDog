@@ -18,6 +18,9 @@ package com.dogsong.a;
  */
 public class Solution_203 {
 
+    /**
+     * 时间复杂度 O(N)，空间复杂度 O(1)
+     */
     public ListNode removeElements(ListNode head, int val) {
         // 生成一个新链表
         ListNode dummy = new ListNode();
