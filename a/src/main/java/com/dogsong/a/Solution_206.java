@@ -27,8 +27,18 @@ public class Solution_206 {
             this.val = x;
         }
 
+        public ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 
+    /**
+     * 复杂度分析：
+     *
+     * 每个结点只遍历一次，所以时间复杂度为 O(N)
+     * 内存空间只使用了常量空间，因此空间复杂度为 O(1)
+     */
     public ListNode reverseList(ListNode head) {
         // 建立一个新的带假头的新链表
         ListNode dummy = new ListNode();
