@@ -1,11 +1,14 @@
 package com.dogsong.a.linkedlist;
 
+import lombok.ToString;
+
 /**
  * 链表的定义
  *
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2021/12/3
  */
+@ToString
 public class ListNode {
 
     /** val用来存放链表中的数据 */

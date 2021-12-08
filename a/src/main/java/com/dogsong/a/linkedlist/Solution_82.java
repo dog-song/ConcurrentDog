@@ -23,7 +23,7 @@ package com.dogsong.a.linkedlist;
  */
 public class Solution_82 {
 
-    public ListNode deleteDuplicates(ListNode head) {
+    public static ListNode deleteDuplicates(ListNode head) {
         // 采用新生成 2条新链表的思路
 
         // ans 这个链表总是用来存放返回结果
@@ -76,6 +76,20 @@ public class Solution_82 {
         ans_tail.next = null;
 
         return ans.next;
+    }
+
+
+    public static void main(String[] args) {
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(2);
+        ListNode c1 = new ListNode(2);
+        ListNode c2 = new ListNode(3);
+        a.next = b;
+        b.next = c1;
+        c1.next = c2;
+
+        ListNode res = deleteDuplicates(a);
+        System.out.println(res);
     }
 
 }
