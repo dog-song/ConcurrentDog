@@ -1,4 +1,4 @@
-package com.dogsong;
+package com.dogsong.b.hashmap;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

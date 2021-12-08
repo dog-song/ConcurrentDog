@@ -1,4 +1,4 @@
-package com.dogsong;
+package com.dogsong.b.hashmap;
 
 /**
  * 扰乱函数
