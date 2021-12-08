@@ -71,7 +71,7 @@ public class Solution_82 {
         // 如果tmp链表中还有元素，并且只有一个
         if (tmp_tail == tmp.next) {
             ans_tail.next = tmp.next;
-            ans_tail = ans_tail.next;
+            ans_tail = tmp.next;
         }
         ans_tail.next = null;
 

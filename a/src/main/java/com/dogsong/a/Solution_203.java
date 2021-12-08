@@ -30,7 +30,7 @@ public class Solution_203 {
         ListNode p = head;
         while (p != null) {
             ListNode back = p.next;
-            // 如果结点值需要保留，那么采用属部追加的方法
+            // 如果结点值需要保留，那么采用尾部追加的方法
             // 添加到新链表中
             if (p.val != val) {
                 tail.next = p;
