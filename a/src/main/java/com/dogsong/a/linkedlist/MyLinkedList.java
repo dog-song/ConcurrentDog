@@ -1,4 +1,4 @@
-package com.dogsong.a;
+package com.dogsong.a.linkedlist;
 
 /**
  * [707] 设计链表

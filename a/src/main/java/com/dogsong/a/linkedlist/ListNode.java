@@ -1,4 +1,4 @@
-package com.dogsong.a;
+package com.dogsong.a.linkedlist;
 
 /**
  * 链表的定义

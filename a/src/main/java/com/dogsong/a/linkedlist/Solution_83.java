@@ -1,4 +1,4 @@
-package com.dogsong.a;
+package com.dogsong.a.linkedlist;
 
 /**
  * [83] 删除排序链表中的重复元素
