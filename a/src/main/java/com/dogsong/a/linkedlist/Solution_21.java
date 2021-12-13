@@ -12,6 +12,10 @@ package com.dogsong.a.linkedlist;
  */
 public class Solution_21 {
 
+    /**
+     * 时间复杂度 O(N)，空间复杂度 O(1)
+     *
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // 首先定义一个空链表
         ListNode dummy = new ListNode();
