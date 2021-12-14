@@ -23,50 +23,57 @@ package com.dogsong.a.linkedlist;
 public class Solution_24 {
 
     public ListNode swapPairs(ListNode head) {
-        ListNode odd = new ListNode();
-        ListNode even = new ListNode();
+        // 生成奇数 index 应该存放的链表
+        ListNode oddDummy = new ListNode();
+        ListNode oddTail = oddDummy;
 
-        ListNode odd_tail = odd.next;
-        ListNode even_tail = even.next;
+        // 生成偶数 index 应该存放的链表
+        ListNode evenDummy = new ListNode();
+        ListNode evenTail = evenDummy;
 
         // split the list into 2 parts
-        int idx = 1;
+        int idx = 0;
         ListNode p = head;
         while (p != null) {
             ListNode back = p.next;
 
-            if ((idx & 0x01) == 1) {
-                odd_tail.next = p;
-                odd_tail = p;
+            // 判断是否是奇数, 是偶数, 放在偶数的链表中
+            if ((idx & 0x01) == 0) {
+                evenTail.next = p;
+                evenTail = p;
             } else {
-                even_tail.next = p;
-                even_tail = p;
+                oddTail.next = p;
+                oddTail = p;
             }
 
             p = back;
             idx ++;
         }
 
-        odd_tail.next = even_tail.next = null;
-        return merge(odd.next, even.next);
+        oddTail.next = evenTail.next = null;
+        return mergeList(oddDummy.next, evenDummy.next);
     }
 
-    public ListNode merge(ListNode odd, ListNode even) {
-        boolean isEven = true;
+    public ListNode mergeList(ListNode odd, ListNode even) {
         ListNode dummy = new ListNode();
         ListNode tail = dummy;
+        boolean isEven = true;
 
+        // 合并两个链表
         while (odd != null || even != null) {
-            if (odd == null || isEven && even != null) {
-                tail.next = even;
-                even = even.next;
-            } else {
+            // odd 不为 null, 先取 odd 节点
+            if (isEven && odd != null) {
                 tail.next = odd;
+                tail = odd;
                 odd = odd.next;
+            } else { // 否则, 取 even 节点
+                tail.next = even;
+                tail = even;
+                even = even.next;
             }
-            tail = tail.next;
             isEven = !isEven;
         }
+        // 尾部设为 null
         tail.next = null;
         return dummy.next;
     }
