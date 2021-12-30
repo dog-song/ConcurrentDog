@@ -11,6 +11,7 @@ import java.util.Date;
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2021/12/30
  */
+@SuppressWarnings("all")
 public class SyncThread implements Runnable {
 
     @Override
