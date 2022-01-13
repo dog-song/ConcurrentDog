@@ -1,5 +1,6 @@
 package com.dogsong.a.linkedlist;
 
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
@@ -9,6 +10,7 @@ import lombok.ToString;
  * @since 2021/12/3
  */
 @ToString
+@EqualsAndHashCode
 public class ListNode {
 
     /** val用来存放链表中的数据 */
