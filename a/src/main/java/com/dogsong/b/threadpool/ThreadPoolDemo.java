@@ -1,7 +1,6 @@
 package com.dogsong.b.threadpool;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * 各种线程的运行情况
@@ -9,6 +8,7 @@ import java.util.concurrent.Executors;
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2022/1/18
  */
+@SuppressWarnings("all")
 public class ThreadPoolDemo {
 
     public static void main(String[] args) {
@@ -16,8 +16,13 @@ public class ThreadPoolDemo {
         ExecutorService executorService2 = Executors.newFixedThreadPool(100);
         ExecutorService executorService3 = Executors.newSingleThreadExecutor();
 
+        ThreadPoolExecutor customService = new ThreadPoolExecutor(
+                10, 20, 0L, TimeUnit.MICROSECONDS,
+                new ArrayBlockingQueue<>(10)
+        );
+
         for (int i = 0; i <= 100; i++) {
-            executorService1.execute(new MyTask(i));
+            customService.execute(new MyTask(i));
         }
     }
 }
