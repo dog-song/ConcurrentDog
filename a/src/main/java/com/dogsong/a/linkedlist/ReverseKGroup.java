@@ -3,6 +3,8 @@ package com.dogsong.a.linkedlist;
 /**
  * [25] K 个一组翻转链表
  *
+ * https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
+ *
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2022/2/16
  */
