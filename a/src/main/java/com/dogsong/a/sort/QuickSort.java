@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2022/2/10
  */
-public class QuicklySort {
+public class QuickSort {
 
     /**
      * 交换数组中两个元素的值
@@ -61,11 +61,11 @@ public class QuicklySort {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{4,0,2,1,1,0,3};
+        int[] nums = {4,0,2,1,1,0,3};
 
         quickSort(nums);
 
-        Arrays.stream(nums).forEach(System.out::println);
+        System.out.println(Arrays.toString(nums));
 
         System.out.println("-----------------");
         int k = 2;
