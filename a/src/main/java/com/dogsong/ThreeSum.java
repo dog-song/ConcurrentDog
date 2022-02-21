@@ -16,7 +16,9 @@ public class ThreeSum {
 
     public static List<List<Integer>> threeSum(int[] nums) {
         int n = nums.length;
+        // 排序
         Arrays.sort(nums);
+
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
         // 枚举 a
         for (int first = 0; first < n; ++first) {
@@ -26,6 +28,7 @@ public class ThreeSum {
             }
             // c 对应的指针初始指向数组的最右端
             int third = n - 1;
+            // 目标值
             int target = -nums[first];
             // 枚举 b
             for (int second = first + 1; second < n; ++second) {
