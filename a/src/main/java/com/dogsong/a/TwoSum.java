@@ -13,6 +13,26 @@ import java.util.Map;
  */
 public class TwoSum {
 
+    /**
+     * 时间复杂度：O(N^2)
+     * 空间复杂度：O(N^2)
+     */
+    public static int[] twoSum2(int[] nums, int target) {
+        final int N = nums.length;
+        for (int i = 0; i < N; i++) {
+            for (int j = i+1; j < N; j++) {
+                 if (nums[i] + nums[j] == target) {
+                     return new int[]{nums[i], nums[j]};
+                 }
+            }
+        }
+        return new int[0];
+    }
+
+    /**
+     * 时间复杂度：O(N)
+     * 空间复杂度：O(N)
+     */
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> hashtable = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
