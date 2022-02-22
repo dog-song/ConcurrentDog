@@ -53,7 +53,7 @@ public class QuickSort {
     /**
      * 主函数，将数组nums排序
      */
-    private static void quickSort(int[] nums) {
+    public static void quickSort(int[] nums) {
         if (nums == null) {
             return;
         }

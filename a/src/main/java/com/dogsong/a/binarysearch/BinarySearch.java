@@ -1,5 +1,10 @@
 package com.dogsong.a.binarysearch;
 
+import com.dogsong.a.helper.SortHelper;
+import com.dogsong.a.sort.QuickSort;
+
+import java.util.Arrays;
+
 /**
  * 二分查找
  *
@@ -29,7 +34,15 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 1 ,2, 3, 5, 5, 7, 8, 9};
+        // 获取随机数组
+        int[] nums = SortHelper.randomArray(10);
+        System.out.println(Arrays.toString(nums));
+
+        // 先排序
+        QuickSort.quickSort(nums);
+        System.out.println(Arrays.toString(nums));
+        System.out.println(SortHelper.validate(nums));
+
         System.out.println(binarySearch(nums, 7));
     }
 
