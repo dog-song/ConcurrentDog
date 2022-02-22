@@ -27,6 +27,7 @@ public class ThreadTest {
                 }
             };
             thread.start();
+            // join 的意思就是当前线程等待另一个线程执行完成之后，才能继续操作
             thread.join();
         }
 
