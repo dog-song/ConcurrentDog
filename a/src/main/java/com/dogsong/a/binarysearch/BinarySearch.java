@@ -17,12 +17,13 @@ public class BinarySearch {
         if (nums == null || nums.length == 0)
             return false;
 
-        int l = 0, r = nums.length;
+        int l = 0;
+        int r = nums.length;
         while (l < r) {
             // 取中间的值
             final int m = l + ((r - l) >> 1);
 
-            if (target == nums[m])
+            if (nums[m] == target)
                 return true;
             if (nums[m] < target) {
                 l = m + 1;
