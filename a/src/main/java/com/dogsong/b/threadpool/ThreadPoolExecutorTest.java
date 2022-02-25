@@ -7,11 +7,12 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * TODO
+ * ThreadPoolExecutorTest
  *
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2022/1/17
  */
+@SuppressWarnings("all")
 public class ThreadPoolExecutorTest {
 
     private static int taskCount = 41;//任务数
