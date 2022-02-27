@@ -10,7 +10,7 @@ package com.dogsong.a.linkedlist;
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2021/12/8
  */
-public class Solution_21 {
+public class MergeTwoLists {
 
     /**
      * 时间复杂度 O(N)，空间复杂度 O(1)

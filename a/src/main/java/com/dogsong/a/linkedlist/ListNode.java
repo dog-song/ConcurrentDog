@@ -30,4 +30,10 @@ public class ListNode {
         this.next = next;
     }
 
+    public ListNode setNext(int val) {
+        ListNode node = new ListNode(val);
+        this.next = node;
+        return node;
+    }
+
 }
