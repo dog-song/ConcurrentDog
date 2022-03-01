@@ -27,7 +27,7 @@ public class DetectCycle {
         if (s1 != s2) {
             return null;
         }
-        s2 = head;
+        s1 = head;
         while (s1 != s2) {
             s1 = s1.next;
             s2 = s2.next;
