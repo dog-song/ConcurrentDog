@@ -1,4 +1,4 @@
-package com.dogsong.a;
+package com.dogsong.a.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
