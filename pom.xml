@@ -12,6 +12,7 @@
         <module>a</module>
         <module>IRpc</module>
         <module>configdemo</module>
+        <module>nettystudy</module>
     </modules>
 
     <properties>
