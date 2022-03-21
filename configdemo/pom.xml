@@ -29,11 +29,11 @@
             <version>2.2.5.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-config</artifactId>
-            <version>0.8.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.nacos</groupId>-->
+<!--            <artifactId>nacos-config</artifactId>-->
+<!--            <version>0.8.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>

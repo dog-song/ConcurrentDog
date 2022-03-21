@@ -10,8 +10,6 @@ spring:
         password: Nacos_654321
         namespace: DogSong
         file-extension: yaml
-        shared-configs:
-          -
 
 server:
   port: 8081
