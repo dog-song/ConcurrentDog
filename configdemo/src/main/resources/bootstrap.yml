@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: configdemo
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.0.7.88:18117
+        context-path: nacos
+        username: nacos
+        password: Nacos_654321
+        namespace: DogSong
+        file-extension: yaml
+        shared-configs:
+          -
+
+server:
+  port: 8081

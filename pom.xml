@@ -11,6 +11,7 @@
     <modules>
         <module>a</module>
         <module>IRpc</module>
+        <module>configdemo</module>
     </modules>
 
     <properties>
