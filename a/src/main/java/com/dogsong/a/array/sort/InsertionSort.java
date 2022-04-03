@@ -1,4 +1,4 @@
-package com.dogsong.a.array;
+package com.dogsong.a.array.sort;
 
 import java.util.Arrays;
 
