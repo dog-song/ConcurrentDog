@@ -8,6 +8,10 @@ import java.util.Arrays;
 /**
  * 二分查找
  *
+ * [704] https://leetcode-cn.com/problems/binary-search/
+ *
+ * https://kaiwu.lagou.com/course/courseInfo.htm?courseId=685#/detail/pc?id=6698
+ *
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2022/2/22
  */
