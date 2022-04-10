@@ -9,6 +9,8 @@ import java.util.Queue;
  *
  * https://leetcode-cn.com/problems/merge-k-sorted-lists/description/
  *
+ * @see <a href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=685#/detail/pc?id=6694">练习题 3：给定 k 个有序链表，合并成一个有序链表</a>
+ *
  * 给你一个链表数组，每个链表都已经按升序排列。
  *
  * 请你将所有链表合并到一个升序链表中，返回合并后的链表。
@@ -32,7 +34,7 @@ import java.util.Queue;
  * @author <a href="mailto:dogsong99@gmail.com">domi</a>
  * @since 2021/12/10
  */
-public class Solution_23 {
+public class MergeKLists {
 
     public ListNode mergeKLists(ListNode[] lists) {
         final int N = lists == null ? 0 : lists.length;
