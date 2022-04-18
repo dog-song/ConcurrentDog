@@ -14,7 +14,14 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        Map<String, String> map = new HashMap<>(2);
+        Map<String, String> map = new HashMap<>();
+
+        String put = map.put("zhangsan", "zhangsan");
+        System.out.println(put);
+
+
+        String put1 = map.put("zhangsan", "lisi");
+        System.out.println(put1);
     }
 
 }
