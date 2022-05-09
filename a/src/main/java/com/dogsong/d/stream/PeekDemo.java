@@ -22,6 +22,13 @@ public class PeekDemo {
 
         System.out.println(collect);
 
+        for (int binCount = 0; ; ++binCount) {
+            if (binCount == 6) {
+                break;
+            }
+        }
+
+        System.out.println("-----------------");
     }
 
 }
