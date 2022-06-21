@@ -1,5 +1,9 @@
 package com.dogsong;
 
+import com.dogsong.convert.CustomerMapper;
+import com.dogsong.entity.Customer;
+import com.dogsong.entity.CustomerDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +22,20 @@ public class TestController {
     @Value("${testStr}")
     private String testStr;
 
+    @Autowired
+    private CustomerMapper mapper;
+
     @GetMapping("/test")
     public String test() {
         return testStr;
     }
+
+    @GetMapping("/getName")
+    public String test2() {
+        Customer customer = new Customer(1L, "dogsong");
+        CustomerDto customerDto = mapper.toCustomerDto(customer);
+        return customerDto.toString();
+    }
+
 }
 
