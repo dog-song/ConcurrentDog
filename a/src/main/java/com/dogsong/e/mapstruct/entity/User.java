@@ -2,6 +2,7 @@ package com.dogsong.e.mapstruct.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * user
@@ -10,6 +11,7 @@ import lombok.Data;
  * @since 2022/6/21
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class User {
 
