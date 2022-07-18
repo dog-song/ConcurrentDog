@@ -17,6 +17,8 @@ import java.util.Objects;
 
 /**
  * 自定义 String 序列化器
+ * 参考：参考jackson的 {@link com.fasterxml.jackson.databind.ser.std.StringSerializer}，下面的示例只针对String类型进行脱敏
+ *
  *
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2022/7/18
