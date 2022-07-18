@@ -1,5 +1,7 @@
 package com.dogsong.entity;
 
+import com.dogsong.annotation.DataMasking;
+import com.dogsong.datamasking.DataMaskingFunc;
 import lombok.Data;
 
 /**
@@ -10,6 +12,16 @@ import lombok.Data;
  */
 @Data
 public class CustomerDto {
+
     private Long id;
+
+    @DataMasking(maskFunc = DataMaskingFunc.ALL_MASK)
     private String customerName;
+
+    private Integer age;
+
+    private String address;
+
+    @DataMasking(maskFunc = DataMaskingFunc.ALL_MASK)
+    private String email;
 }
