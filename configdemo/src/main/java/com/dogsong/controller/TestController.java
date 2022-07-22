@@ -1,4 +1,4 @@
-package com.dogsong;
+package com.dogsong.controller;
 
 import com.dogsong.convert.CustomerMapper;
 import com.dogsong.entity.Customer;
