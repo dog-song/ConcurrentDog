@@ -13,6 +13,7 @@
         <module>IRpc</module>
         <module>configdemo</module>
         <module>nettystudy</module>
+        <module>java-spi</module>
     </modules>
 
     <properties>
