@@ -26,7 +26,7 @@ public class EmailService implements ApplicationListener<UserRegisterEvent> {
      *
      */
     @SneakyThrows
-    @Async
+    @Async("defaultTaskExecutor")
     @Override
     public void onApplicationEvent(UserRegisterEvent event) {
         log.info("[onApplicationEvent][给用户({}) 发送邮件]", event.getUsername());

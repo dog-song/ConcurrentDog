@@ -1,0 +1,2 @@
+tcp = com.dogsong.dubbospi.common.TcpProtocol
+http = com.dogsong.dubbospi.common.HttpProtocol

@@ -14,6 +14,8 @@
         <module>configdemo</module>
         <module>nettystudy</module>
         <module>java-spi</module>
+        <module>dubbo_demo</module>
+        <module>dubbo_demo/dubbo_spi</module>
     </modules>
 
     <properties>

@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class MsgListener {
 
 
-    @Async
+    @Async("defaultTaskExecutor")
     @SneakyThrows
     @EventListener(MsgEvent.class)
     public void sendMsg(MsgEvent event) {
