@@ -1,6 +1,7 @@
 package com.dogsong.event.user.register.publisher;
 
 import com.dogsong.event.user.register.UserRegisterEvent;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
@@ -21,7 +22,7 @@ public class UserService implements ApplicationEventPublisherAware {
     private ApplicationEventPublisher applicationEventPublisher;
 
     @Override
-    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+    public void setApplicationEventPublisher(@NonNull ApplicationEventPublisher applicationEventPublisher) {
         this.applicationEventPublisher = applicationEventPublisher;
     }
 

@@ -14,6 +14,10 @@ import java.util.Set;
 public class DubboSPI {
 
     public static void main(String[] args) {
+
+        // IProtocol adaptiveExtension = ExtensionLoader.getExtensionLoader(IProtocol.class).getAdaptiveExtension();
+
+
         // 获取ExtensionLoader对象
         ExtensionLoader<IProtocol> extensionLoader = ExtensionLoader.getExtensionLoader(IProtocol.class);
 
