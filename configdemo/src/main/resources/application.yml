@@ -4,6 +4,21 @@ server:
 spring:
   application:
     name: configdemo
+  redis:
+    host: dogsong99.redis.rds.aliyuncs.com
+    port: 6379
+    # password=username:password
+    password: dogsong:Song19961107
+    ssl: false
+    database: 0
+    timeout: 1000
+    lettuce:
+      pool:
+        max-active: 100
+        max-wait: -1
+        max-idle: 20
+        min-idle: 0
+
 
 # 注：二者不能同时使用，如若同时使用，则只有logging.file生效
 #  logging.level.包名=指定包下的日志级别
@@ -12,4 +27,3 @@ spring:
 #logging:
 #  file:
 #    path: /Users/dogsong/MySpace/ConcurrentDog/configdemo/
-
