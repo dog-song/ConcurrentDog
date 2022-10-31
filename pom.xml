@@ -16,6 +16,7 @@
         <module>java-spi</module>
         <module>dubbo_demo</module>
         <module>dubbo_demo/dubbo_spi</module>
+        <module>small-spring</module>
     </modules>
 
     <properties>
