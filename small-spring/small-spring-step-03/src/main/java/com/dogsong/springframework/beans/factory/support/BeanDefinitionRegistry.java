@@ -1,5 +1,7 @@
 package com.dogsong.springframework.beans.factory.support;
 
+import com.dogsong.springframework.beans.factory.config.BeanDefinition;
+
 /**
  * BeanDefinitionRegistry
  *
@@ -11,6 +13,6 @@ public interface BeanDefinitionRegistry {
     /**
      * 向注册表中注册 BeanDefinition
      */
-    void registerBeanDefinition();
+    void registerBeanDefinition(String name, BeanDefinition beanDefinition);
 
 }

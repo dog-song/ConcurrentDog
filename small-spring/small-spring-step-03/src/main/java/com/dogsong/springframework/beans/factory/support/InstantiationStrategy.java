@@ -1,6 +1,9 @@
 package com.dogsong.springframework.beans.factory.support;
 
 import com.dogsong.springframework.beans.BeansException;
+import com.dogsong.springframework.beans.factory.config.BeanDefinition;
+
+import java.lang.reflect.Constructor;
 
 /**
  * Bean 实例化策略
@@ -10,5 +13,6 @@ import com.dogsong.springframework.beans.BeansException;
  */
 public interface InstantiationStrategy {
 
-    Object instantiation() throws BeansException;
+    Object instantiation(BeanDefinition beanDefinition, String beanName, Constructor ctor, Object[] args)
+            throws BeansException;
 }
