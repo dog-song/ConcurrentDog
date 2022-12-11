@@ -17,12 +17,32 @@ public class DefaultListableBeanFactory extends AbstractAutowireCableBeanFactory
     private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
     @Override
-    protected BeanDefinition getBeanDefinition(String beanName) throws BeansException {
+    public BeanDefinition getBeanDefinition(String beanName) throws BeansException {
         BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
         if (beanDefinition == null) {
             throw new BeansException("No bean named '" + beanName + "' is defined");
         }
         return beanDefinition;
+    }
+
+    /**
+     * 判断是否包含指定名称的BeanDefinition
+     *
+     * @param beanName name
+     */
+    @Override
+    public boolean containsBeanDefinition(String beanName) {
+        return beanDefinitionMap.containsKey(beanName);
+    }
+
+    /**
+     * Return the names of all beans defined in this registry.
+     * <p>
+     * 返回注册表中所有的Bean名称
+     */
+    @Override
+    public String[] getBeanDefinitionNames() {
+        return beanDefinitionMap.keySet().toArray(new String[0]);
     }
 
     /**
