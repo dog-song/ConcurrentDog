@@ -4,7 +4,6 @@ import com.dogsong.springframework.beans.BeansException;
 import com.dogsong.springframework.beans.factory.ConfigurableListableBeanFactory;
 import com.dogsong.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import com.dogsong.springframework.beans.factory.config.BeanPostProcessor;
-import com.dogsong.springframework.beans.factory.config.ConfigurableBeanFactory;
 import com.dogsong.springframework.context.ConfigurableApplicationContext;
 import com.dogsong.springframework.core.io.DefaultResourceLoader;
 

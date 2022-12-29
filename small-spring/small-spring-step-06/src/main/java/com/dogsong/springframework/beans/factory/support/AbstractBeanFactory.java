@@ -3,6 +3,11 @@ package com.dogsong.springframework.beans.factory.support;
 import com.dogsong.springframework.beans.BeansException;
 import com.dogsong.springframework.beans.factory.BeanFactory;
 import com.dogsong.springframework.beans.factory.config.BeanDefinition;
+import com.dogsong.springframework.beans.factory.config.BeanPostProcessor;
+import com.dogsong.springframework.beans.factory.config.ConfigurableBeanFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 抽象类 bean 工厂
@@ -10,7 +15,11 @@ import com.dogsong.springframework.beans.factory.config.BeanDefinition;
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2022/11/1
  */
-public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
+public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory {
+
+    /** BeanPostProcessors to apply in createBean */
+    private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
+
 
     @Override
     public Object getBean(String name) throws BeansException {
@@ -40,5 +49,21 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     protected abstract BeanDefinition getBeanDefinition(String beanName) throws BeansException;
 
     protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException;
+
+
+    @Override
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor){
+        this.beanPostProcessors.remove(beanPostProcessor);
+        this.beanPostProcessors.add(beanPostProcessor);
+    }
+
+    /**
+     * Return the list of BeanPostProcessors that will get applied
+     * to beans created with this factory.
+     */
+    public List<BeanPostProcessor> getBeanPostProcessors() {
+        return this.beanPostProcessors;
+    }
+
 
 }
