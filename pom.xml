@@ -18,6 +18,9 @@
         <module>dubbo_demo/dubbo_spi</module>
         <module>small-spring</module>
         <module>small-spring/small-spring-step-06</module>
+        <module>tiny-template</module>
+        <module>freemarker-demo</module>
+        <module>cmbc-adapter</module>
     </modules>
 
     <properties>

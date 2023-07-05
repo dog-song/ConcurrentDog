@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dogsong.mapper.FreemarkerTemplateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dogsong.domain.entity.FreemarkerTemplateDO">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="template_info" property="templateInfo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, `name`, template_info
+    </sql>
+
+    <select id="list" parameterType="com.dogsong.domain.entity.FreemarkerTemplateDO" resultMap="BaseResultMap">
+        SELECT id, `name`, template_info
+        FROM freemarker_template
+    </select>
+
+</mapper>
