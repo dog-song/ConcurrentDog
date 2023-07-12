@@ -1,6 +1,9 @@
 package com.dogsong.listener;
 
+import com.dogsong.notice.NoticeHandler;
+import com.dogsong.service.NotificationTaskService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,8 +16,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class NoticeListener {
 
+    @Autowired
+    private NotificationTaskService notificationTaskService;
+
+    @Autowired
+    private NoticeHandler noticeHandler;
+
     public void doTask() {
         log.info("---- listener ----");
+
+        notificationTaskService.save();
+        log.info("---- save job ----");
+
+        noticeHandler.execute();
+        log.info("---- execute job ----");
     }
 
 }
