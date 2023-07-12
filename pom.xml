@@ -21,6 +21,7 @@
         <module>tiny-template</module>
         <module>freemarker-demo</module>
         <module>cmbc-adapter</module>
+        <module>account-notification-plugin</module>
     </modules>
 
     <properties>
