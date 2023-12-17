@@ -29,6 +29,7 @@ public class DispatchNoticeHandler extends AbstractNoticeHandler {
         }
 
         log.info("---- do handler ----");
+
         // 异常信息的统计
         registry.getHandler("505100").handler();
     }

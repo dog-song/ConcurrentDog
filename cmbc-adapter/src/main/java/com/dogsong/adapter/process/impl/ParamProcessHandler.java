@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 /**
  * ParamProcessHandler
  *
@@ -20,7 +22,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class ParamProcessHandler extends AbstractParamProcessor {
+public abstract class ParamProcessHandler extends AbstractParamProcessor {
 
     @Autowired
     private ConversionParam conversionParam;
@@ -37,19 +39,30 @@ public class ParamProcessHandler extends AbstractParamProcessor {
     @Override
     public void invoke(ParamContext context) {
         // 交易码转换
-        conversionParam.transCodeConversion();
+        // conversionParam.transCodeConversion();
 
         // 元数据校验
-        validateParam.validatedOriginParam();
+        // validateParam.validatedOriginParam();
 
         // 封装数据模型
-        buildDataModel.buildDataModel();
+        // buildDataModel.buildDataModel();
 
         // 参数映射转换
-        mappingParam.doMapping();
+        // mappingParam.doMapping();
 
         // 实际调用内部服务
-        SpringContextUtil.getBean("testAdapterService", TestAdapterService.class);
+        // SpringContextUtil.getBean("testAdapterService", TestAdapterService.class);
+
+        if (Objects.nonNull(context)) {
+            customExecute();
+        } else {
+
+            System.out.println(11111);
+            log.info("1111111111");
+        }
+
     }
+
+    public abstract void customExecute();
 
 }

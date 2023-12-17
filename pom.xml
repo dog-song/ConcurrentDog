@@ -22,6 +22,7 @@
         <module>freemarker-demo</module>
         <module>cmbc-adapter</module>
         <module>account-notification-plugin</module>
+        <module>liteflow-demo</module>
     </modules>
 
     <properties>

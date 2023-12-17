@@ -32,4 +32,14 @@ public class AdapterController {
         return paramContext;
     }
 
+
+    @PostMapping("/test/adapter2")
+    public ParamContext test2(@RequestBody Map paramMap) {
+        ParamContext paramContext = new ParamContext();
+
+        paramProcessor.invoke(paramContext);
+
+        return paramContext;
+    }
+
 }

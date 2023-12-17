@@ -1,0 +1,18 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: liteflow-demo
+
+liteflow:
+  rule-source: config/flow.el.xml
+
+
+# 注：二者不能同时使用，如若同时使用，则只有logging.file生效
+#  logging.level.包名=指定包下的日志级别
+#  logging.pattern.console=日志打印规则
+
+#logging:
+#  file:
+#    path: /Users/dogsong/MySpace/ConcurrentDog/configdemo/

@@ -17,4 +17,7 @@ public class NotificationTaskDAO {
         log.info("---- 保存任务记录 ----");
     }
 
+    public void update() {
+        log.info("---- 更新任务记录 ----");
+    }
 }

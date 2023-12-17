@@ -10,4 +10,6 @@ public interface NotificationTaskService {
 
     void save();
 
+    void update();
+
 }

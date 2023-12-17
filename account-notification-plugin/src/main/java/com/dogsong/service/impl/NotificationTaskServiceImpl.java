@@ -26,4 +26,9 @@ public class NotificationTaskServiceImpl implements NotificationTaskService {
         notificationTaskDAO.save();
     }
 
+    @Override
+    public void update() {
+        log.info("---- 更新任务记录 ----");
+    }
+
 }

@@ -2,6 +2,7 @@ package com.dogsong.common;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -12,13 +13,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 2023/7/12
  */
 @Slf4j
-public class NoticeHandlerContext extends ConcurrentHashMap<String, Object> {
+public class HandlerContext extends ConcurrentHashMap<String, Object> implements Serializable {
 
     private static final long serialVersionUID = -7723401814458456310L;
 
-    protected static Class<? extends NoticeHandlerContext> contextClass = NoticeHandlerContext.class;
+    protected static Class<? extends HandlerContext> contextClass = HandlerContext.class;
 
-    protected static final ThreadLocal<? extends NoticeHandlerContext> THREAD_LOCAL = ThreadLocal.withInitial(() -> {
+    protected static final ThreadLocal<? extends HandlerContext> THREAD_LOCAL = ThreadLocal.withInitial(() -> {
         try {
             return contextClass.newInstance();
         } catch (Throwable e) {
@@ -26,11 +27,11 @@ public class NoticeHandlerContext extends ConcurrentHashMap<String, Object> {
         }
     });
 
-    public static void setContextClass(Class<? extends NoticeHandlerContext> clazz) {
+    public static void setContextClass(Class<? extends HandlerContext> clazz) {
         contextClass = clazz;
     }
 
-    public static NoticeHandlerContext getCurrentContext() {
+    public static HandlerContext getCurrentContext() {
         return THREAD_LOCAL.get();
     }
 
@@ -62,7 +63,7 @@ public class NoticeHandlerContext extends ConcurrentHashMap<String, Object> {
         THREAD_LOCAL.remove();
     }
 
-    public NoticeHandlerContext() {
+    public HandlerContext() {
         super();
     }
 }

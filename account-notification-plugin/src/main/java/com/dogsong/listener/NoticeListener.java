@@ -22,6 +22,9 @@ public class NoticeListener {
     @Autowired
     private NoticeHandler noticeHandler;
 
+
+    // TODO: 2023/7/12 怎么暴露这个组件的接口，并且 url 可配置化
+
     public void doTask() {
         log.info("---- listener ----");
 
